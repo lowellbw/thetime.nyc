@@ -1,18 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Fuzzy+Bubbles&display=swap');
+
 * { 
 	box-sizing: border-box;
+    font-family: 'Fuzzy Bubbles', cursive;
 }
 html, body {
 	min-height: 100%;
-	background: honeydew;
+	background: #FAF9F6;
 	color: #000;
+    font-family: 'Fuzzy Bubbles',
 }
 
 .header {
     margin-bottom: 64px;
 }
 
-.hero, .button {
+#the-time, .button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h2 {
+    font-size: 80px;
+}
+button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    margin: 4px 2px;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+button.fade {
+    opacity: 0;
+    button.style.display = "none";
+    button.style.visibility = "hidden";
+
 }

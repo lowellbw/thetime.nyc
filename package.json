@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "moment-timezone": "^0.5.34",
-    "require.js": "^1.0.0"
-  }
-}
