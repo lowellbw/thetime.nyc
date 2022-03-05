@@ -20,5 +20,6 @@ function initializeTime(){
 button = document.querySelector('button');
 button.onclick = function(){
     button.classList.toggle('fade');
-    setTimeout(initializeTime, 800);
+    setTimeout(initializeTime,900);
 }
+

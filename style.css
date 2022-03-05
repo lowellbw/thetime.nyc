@@ -47,34 +47,42 @@ h1 {
     align-items: center;
 }
 
+
+
 h2 {
     font-size: 68px;
     margin: 0;
-    color: aliceblue;
+    color: white;
     padding: 16px;
     position: absolute;
     border-radius: 30%;
-    -webkit-animation: moveX 8.05s linear 0s infinite alternate, moveY 9.4s linear 0s infinite alternate;
-    -moz-animation: moveX 10.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-    -o-animation: moveX 10.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-    animation: moveX 18.05s linear 0s infinite alternate, moveY 20.4s linear 0s infinite alternate;
+    -webkit-animation:fadein .3s, moveX 8.05s linear 0s infinite alternate, moveY 9.4s linear 0s infinite alternate;
+    -moz-animation: fadein .3s, moveX 10.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+    -o-animation: fadein .3s, moveX 10.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
+    animation:fadein .3s, moveX 18.05s linear 0s infinite alternate, moveY 20.4s linear 0s infinite alternate;
 
 }
+
 button {
-    background-image: url("222.png");
+    /*background-image: url("222.png");
+    min-height: 300px;
+    min-width: 300px;
     background-size: cover;
-    color: aliceblue;
+
+    */
+    background-color: Transparent;
+
+    color: white;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    min-height: 400px;
-    min-width: 400px;
     font-size: 68px;
     padding: 8px;
     margin: 4px 2px;
     border-radius: 50%;
     border: none;
+
     -webkit-transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
     -ms-transition: opacity 1s ease-in-out;
@@ -84,7 +92,8 @@ button {
 }
 
 button:hover {
-    background-color: aliceblue;
+    border-radius: 47%;
+
 }
 
 button.fade {
@@ -98,10 +107,8 @@ button.fade {
     justify-content: center;
     align-items: center;
     color: black;
-    font-size: 12px;
+    font-size: 14px;
     padding: 16px 0px;
-}
-.footer p {
 }
 
 a {
@@ -149,29 +156,29 @@ a {
 }
 
 @-webkit-keyframes moveX {
-    from { left: 0; } to { left: -webkit-calc(100% - 390px); }
+    from { left: 0; } to { left: -webkit-calc(100% - 370px); }
   }
   @-moz-keyframes moveX {
-    from { left: 0; } to { left: -webkit-calc(100% - 390px); }
+    from { left: 0; } to { left: -webkit-calc(100% - 370px); }
   }
   @-o-keyframes moveX {
-    from { left: 0; } to { left: -webkit-calc(100% - 390px); }
+    from { left: 0; } to { left: -webkit-calc(100% - 370px); }
   }
   @keyframes moveX {
-    from { left: 0; } to { left: -webkit-calc(100% - 390px); }
+    from { left: 0; } to { left: -webkit-calc(100% - 370px); }
   }
 
   @-webkit-keyframes moveY {
-    from { top: 60px; } to { top: -webkit-calc(100% - 160px); }
+    from { top: 60px; } to { top: -webkit-calc(100% - 100px); }
   }
   @-moz-keyframes moveY {
-    from { top: 60px; } to { top: -webkit-calc(100% - 160px); }
+    from { top: 60px; } to { top: -webkit-calc(100% - 100px); }
   }
   @-o-keyframes moveY {
-    from { top: 60px; } to { top: -webkit-calc(100% - 160px); }
+    from { top: 60px; } to { top: -webkit-calc(100% - 100px); }
   }
   @keyframes moveY {
-    from { top: 60px; } to { top: -webkit-calc(100% - 160px); }
+    from { top: 60px; } to { top: -webkit-calc(100% - 100px); }
   }
 
   .hover-underline-animation {
@@ -196,3 +203,27 @@ a {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+  p.hover-underline-animation:after {
+    height: 1.5px;
+  }
+  button.hover-underline-animation:after {
+    height: 5px;
+  }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
