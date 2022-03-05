@@ -12,11 +12,13 @@ function initializeTime(){
     const element = document.getElementById("the-time");
     element.appendChild(clock);
     updateTime();
+    button.remove();
 
 }
 
-function reformat(){
-    button = document.querySelector('button');
+
+button = document.querySelector('button');
+button.onclick = function(){
     button.classList.toggle('fade');
-    initializeTime();
+    setTimeout(initializeTime, 330);
 }
