@@ -32,8 +32,8 @@ body {
     align-items: center;
     height: 48px;
     padding: 16px 32px;
-    background-color: #f4f0e5;
-    opacity: 80%;
+    background-color: aliceblue;
+    opacity: 70%;
 
 }
 
@@ -53,11 +53,11 @@ button {
     background-color: aliceblue;
     border: none;
     color: black;
-    padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 60px;
+    font-size: 68px;
+    
     margin: 4px 2px;
     height: auto;
     width: auto;
@@ -69,7 +69,7 @@ button {
     transition: opacity 0.3s ease-in-out;
 }
 button:hover {
-    background-color: rgb(242, 229, 205);
+    background-color: rgb(193, 219, 241);
 }
 
 button.fade {
@@ -84,15 +84,20 @@ button.fade {
     align-items: center;
     font-size: 10px;
     padding: 16px 0px;
-    background-color: #f4f0e5;
+    background-color: aliceblue;
+    opacity: 70%;
 }
 
 a {
     text-decoration: none;
     color: black;
+    padding: 8px;
+
 }
 a:hover {
-    color: #f4f0e5;
+    background-color: yellow;
+    padding: 8px;
+    opacity: 10%;
 }
 
 .content {
