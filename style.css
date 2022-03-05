@@ -122,6 +122,12 @@ a {
 .content {
     z-index: 20;
 }
+p {
+    padding-bottom: 4px;
+}
+p:hover {
+    color: aliceblue;
+}
 
 
 .video-container {
