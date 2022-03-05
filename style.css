@@ -46,9 +46,11 @@ body {
 h2 {
     font-size: 68px;
     background-color: aliceblue;
+    margin: 0;
     opacity: 60%;
-    padding: 8px;
+    padding: 16px;
     position: absolute;
+    border-radius: 30%;
     -webkit-animation: moveX 8.05s linear 0s infinite alternate, moveY 9.4s linear 0s infinite alternate;
     -moz-animation: moveX 10.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
     -o-animation: moveX 10.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
@@ -56,25 +58,28 @@ h2 {
 
 }
 button {
-    background-color: rgb(193, 219, 241);    border: none;
-    color: black;
+    background-image: url("222.png");
+    background-size: cover;
+    color: aliceblue;
+    font-weight: 700;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    min-height: 400px;
+    min-width: 400px;
     font-size: 68px;
     padding: 8px;
     margin: 4px 2px;
-    height: auto;
-    width: auto;
-    opacity: 50%;
-    -webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    -ms-transition: opacity 0.5s ease-in-out;
-    -o-transition: opacity 0.5s ease-in-out;
-    transition: opacity 0.5s ease-in-out;
+    border-radius: 50%;
+    border: none;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
 
 }
-}
+
 button:hover {
     background-color: aliceblue;
 }
@@ -137,7 +142,7 @@ a:hover {
     width: 100%;
     height: 100%;
     background-image: url("overlay.png");
-    opacity: 20%;
+    opacity: 25%;
 
 }
 
@@ -155,14 +160,14 @@ a:hover {
   }
 
   @-webkit-keyframes moveY {
-    from { top: 0; } to { top: -webkit-calc(100% - 150px); }
+    from { top: 60px; } to { top: -webkit-calc(100% - 180px); }
   }
   @-moz-keyframes moveY {
-    from { top: 0; } to { top: -webkit-calc(100% - 150px); }
+    from { top: 60px; } to { top: -webkit-calc(100% - 180px); }
   }
   @-o-keyframes moveY {
-    from { top: 0; } to { top: -webkit-calc(100% - 150px); }
+    from { top: 60px; } to { top: -webkit-calc(100% - 180px); }
   }
   @keyframes moveY {
-    from { top: 0; } to { top: 90%; }
+    from { top: 60px; } to { top: -webkit-calc(100% - 180px); }
   }
