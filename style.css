@@ -147,7 +147,7 @@ p:hover {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: var(--primary-color) url('static.png') no-repeat center center/cover;
+    background: var(--primary-color) url('222.png') no-repeat center center/cover;
 }
 .video-container video {
     min-width: 100%;
