@@ -224,11 +224,11 @@ p:hover {
     }
     .header-buttons {
         font-size: 18px;
-        font-size: 4.5vw;
+        font-size: 4vw;
 
     }
     ul {
-        gap: 10px;
+        gap: 14px;
     } 
 }
 
