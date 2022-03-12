@@ -3,7 +3,6 @@ moment().format();
 
 function updateTime() {
     let time = moment().tz("America/New_york").format("h:mm:ss a");
-    console.log(time)
     document.querySelector('h2').textContent = time;
     setInterval(updateTime, 1000);
     updateTime;
