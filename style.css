@@ -42,6 +42,7 @@ body {
     , rgb(0,0,0,0));
 
 
+
 }
 a:hover .dissapeared{
     opacity: 1;
@@ -58,6 +59,8 @@ h1 {
     font-weight: 900;
     font-size: 70px;
     font-weight: 700;
+    text-shadow: 5px 5px hsl(0, 87%, 48%);
+
 }
 
 
@@ -88,6 +91,9 @@ h2 {
     color: white;
     padding: 16px;
     border-radius: 30%;
+    text-shadow: 8px 8px hsl(0, 87%, 48%);
+
+
 }
 .footer {
     display: flex;
@@ -104,6 +110,8 @@ a {
     color: white;
     font-size: 36px;
     font-weight: 700;
+    text-shadow: 3px 3px hsl(0, 87%, 48%);
+
 
 }
 a:active, h1:active {
@@ -162,6 +170,7 @@ p:hover {
   .hover-underline-animation {
     display: inline-block;
     position: relative;
+
   }
   
   .hover-underline-animation:after {
@@ -176,6 +185,9 @@ p:hover {
     background-color: white;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
+    box-shadow: 2px 2px hsl(0, 87%, 48%);
+    ;
+
   }
   
   .hover-underline-animation:hover:after {

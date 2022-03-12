@@ -14,9 +14,11 @@ function updateVideoBackground(new_source) {
     let background = document.querySelector('video');
     background.src = new_source;
 }
-
+home = document.querySelector('h1');
+home.addEventListener("click", function(){updateVideoBackground('nyc-background-lowquality.mp4')});
 
 brooklyn = document.getElementById('brooklyn');
 brooklyn.addEventListener("click", function(){updateVideoBackground('boat-in-brooklyn.mov')});
-home = document.querySelector('h1');
-home.addEventListener("click", function(){updateVideoBackground('nyc-background-lowquality.mp4')});
+
+manhattan = document.getElementById('manhattan');
+manhattan.addEventListener("click", function(){updateVideoBackground('manhattan.mp4')});
