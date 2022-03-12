@@ -270,6 +270,9 @@ p:hover {
       @keyframes moveY {
         from { top: 130px; } to { top: -webkit-calc(100% - 100px); }
       }
+      h2 {
+        font-size: 46px;
+      }
 
 
 }
