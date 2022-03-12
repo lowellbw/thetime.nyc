@@ -22,3 +22,12 @@ brooklyn.addEventListener("click", function(){updateVideoBackground('boat-in-bro
 
 manhattan = document.getElementById('manhattan');
 manhattan.addEventListener("click", function(){updateVideoBackground('manhattan.mp4')});
+
+bronx = document.getElementById('bronx');
+bronx.addEventListener("click", function(){updateVideoBackground('bronx.mp4')});
+
+queens = document.getElementById('queens');
+queens.addEventListener("click", function(){updateVideoBackground('queens.mp4')});
+
+staten = document.getElementById('staten');
+staten.addEventListener("click", function(){updateVideoBackground('statenisland.mp4')});
