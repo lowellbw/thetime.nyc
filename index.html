@@ -1,280 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-36MYB1B529"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-* { 
-    box-sizing: border-box;
-    font-family: 'Dosis', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+      gtag('config', 'G-36MYB1B529');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#A7A9AC">
+    <meta name="description" content= "View the time in NYC!" />
+    <meta name="robots" content= "index, nofollow">
 
-body {
-    background: #EDEBED url('222.png');
-}
-html, body {
-    height: 100%;
-    width: 100%;
-    background: #FAF9F6;
-    color: #000;
-}
+    <title>thetime • nyc</title>
+    <link rel="icon" href="l-train.png" type="image/icon type">
 
-.main-body {
-    flex: auto;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 48px;
-    padding: 50px 40px;
-    background-image: linear-gradient(rgb(0,0,0,.7), rgb(0,0,0,0));
-}
-
-button:hover .dissapeared {
-    opacity: 1;
-}
-
-.dissapeared {
-    opacity: 0;
-}
-
-h1 {
-    color: white;
-    font-weight: 900;
-    font-size: 70px;
-    font-weight: 700;
-    text-shadow: .07em .07em 0 hsl(0, 100%, 50%);
-}
-
-#the-time {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-h2 {
-    font-size: 140px;
-    font-size: 18vw;
-    font-weight: 700;
-    margin: 0;
-    color: white;
-    padding: 16px;
-    border-radius: 30%;
-    text-shadow: .06em .06em 0 hsl(0, 100%, 50%);
-}
-
-.footer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-size: 14px;
-    font-weight: 700;
-    padding: 16px 0px;
-    text-shadow: none;
-    text-decoration: none;
-}
-
-button {
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-.header-buttons {
-    text-decoration: none;
-    color: white;
-    font-size: 36px;
-    font-weight: 700;
-    text-shadow: .08em .08em 0 hsl(0, 100%, 50%);
-}
-
-button:active, h1:active, .header-buttons:active {
-    opacity: 0.7;
-}
-
-ul {
-    display: flex;
-    gap: 50px; /* Increased spacing */
-    list-style-type: none;
-}
-
-.content {
-    z-index: 20;
-}
-
-p {
-    padding-bottom: 4px;
-}
-
-p:hover {
-    color: aliceblue;
-}
-
-.video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background: var(--primary-color) url('222.png') no-repeat center center/cover;
-}
-
-.video-container video {
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.video-container:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("overlay-3.jpeg");
-    background-size: cover;
-    opacity: 28%;
-}
-
-.hover-underline-animation {
-    display: inline-block;
-    position: relative;
-}
-
-.hover-underline-animation:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
-    border-radius: 10px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-    box-shadow: 2px 2px hsl(0, 87%, 48%);
-}
-
-.hover-underline-animation:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-p.hover-underline-animation:after {
-    height: 1.5px;
-}
-
-@media (max-width: 1300px) {
-    .header-buttons {
-        font-size: 26px;
-    }
-    ul {
-        gap: 30px;
-    } 
-}
-
-@media (max-width: 1100px) {
-    .header-buttons {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 995px) {
-    .header {
-        flex-direction: column;
-        padding-top: 15px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    h2 {
-        font-size: 70px;
-        font-size: 18vw;
-    }
-    .header-buttons {
-        font-size: 18px;
-        font-size: 4vw;
-    }
-    ul {
-        gap: 14px;
-    } 
-}
-
-@media (max-width: 530px) {
-    .header {
-        padding: 50px 15px;
-    }
-}
-
-@media (max-width: 400px) {
-    h1 {
-        font-size: 60px;
-        font-size: 16vw;
-    }
-    .header-buttons {
-        font-size: 16px;
-        font-size: 4.5vw;
-    }
-    ul {
-        gap: 10px;
-    }
-    .header {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
-
-/* Additional styling for the blind-solve page */
-#notation-generator {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-#cube-state {
-    width: 80%;
-    font-size: 16px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-#generate-button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-#generate-button:hover {
-    background-color: #555;
-}
-
-#notations-output {
-    margin-top: 20px;
-    font-size: 16px;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    width: 80%;
-    background-color: #f5f5f5;
-    padding: 10px;
-    border-radius: 5px;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header content">
+        <h1>thetime(nyc)</h1>
+        <ul>
+            <li><button id='brooklyn' class="hover-underline-animation header-buttons">brooklyn</button></li>
+            <li><button id='manhattan' class="hover-underline-animation header-buttons">manhattan</button></li>
+            <li><button id='queens' class="hover-underline-animation header-buttons">queens</button></li>
+            <li><button id='bronx' class="hover-underline-animation header-buttons">bronx</button></li>
+            <li><button id='staten' class="hover-underline-animation header-buttons">staten island</button></li>
+            <li><a href="blind-solve.html" class="hover-underline-animation header-buttons">Blind Solve Notations</a></li>
+        </ul>
+    </div>
+    <div class="main-body">
+        <div class="video-container">
+            <video alt='video of cityscapes' src="background-shortened.mp4" poster="background-m.jpeg" autoplay muted loop playsinline></video>
+        </div>
+        <div id='the-time' class="content">
+            <h2 class='scroll-left'></h2>
+        </div>
+    </div>
+    <div class="footer content">
+        <a href="https://twitter.com/Lwbord" target="_blank" rel="noreferrer noopener"><p class="hover-underline-animation">lowell weisbord 2022</p></a>
+    </div>
+    <script src="moment.js"></script>
+    <script src="moment-timezone-with-data-10-year-range.js"></script>
+    <script src="javascript.js"></script>
+</body>
+</html>
