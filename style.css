@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
 
 * { 
-	box-sizing: border-box;
+    box-sizing: border-box;
     font-family: 'Dosis', sans-serif;
     margin: 0;
     padding: 0;
@@ -14,9 +14,8 @@ html, body {
     height: 100%;
     width: 100%;
     background: #FAF9F6;
-	color: #000;
+    color: #000;
 }
-
 
 .main-body {
     flex: auto;
@@ -29,9 +28,7 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-
 }
-
 
 .header {
     display: flex;
@@ -39,13 +36,10 @@ body {
     align-items: center;
     height: 48px;
     padding: 50px 40px;
-    background-image: linear-gradient(rgb(0,0,0,.7)
-    , rgb(0,0,0,0));
-
-
-
+    background-image: linear-gradient(rgb(0,0,0,.7), rgb(0,0,0,0));
 }
-button:hover .dissapeared{
+
+button:hover .dissapeared {
     opacity: 1;
 }
 
@@ -53,25 +47,19 @@ button:hover .dissapeared{
     opacity: 0;
 }
 
-
-
 h1 {
     color: white;
     font-weight: 900;
     font-size: 70px;
     font-weight: 700;
     text-shadow: .07em .07em 0 hsl(0, 100%, 50%);
-
-
 }
-
 
 #the-time {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 h2 {
     font-size: 140px;
@@ -82,11 +70,9 @@ h2 {
     padding: 16px;
     border-radius: 30%;
     text-shadow: .06em .06em 0 hsl(0, 100%, 50%);
-
-
-
 }
-.footer a{
+
+.footer a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,12 +82,12 @@ h2 {
     padding: 16px 0px;
     text-shadow: none;
     text-decoration: none;
-   
 }
+
 button {
-  background: none;
-  border: none;
-  padding: 0;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .header-buttons {
@@ -110,30 +96,29 @@ button {
     font-size: 36px;
     font-weight: 700;
     text-shadow: .08em .08em 0 hsl(0, 100%, 50%);
-
-
-
 }
-button:active, h1:active {
+
+button:active, h1:active, .header-buttons:active {
     opacity: 0.7;
 }
+
 ul {
     display: flex;
-    gap: 30px;
+    gap: 50px; /* Increased spacing */
     list-style-type: none;
-
 }
 
 .content {
     z-index: 20;
 }
+
 p {
     padding-bottom: 4px;
 }
+
 p:hover {
     color: aliceblue;
 }
-
 
 .video-container {
     position: absolute;
@@ -144,6 +129,7 @@ p:hover {
     overflow: hidden;
     background: var(--primary-color) url('222.png') no-repeat center center/cover;
 }
+
 .video-container video {
     min-width: 100%;
     min-height: 100%;
@@ -163,18 +149,15 @@ p:hover {
     height: 100%;
     background-image: url("overlay-3.jpeg");
     background-size: cover;
-
     opacity: 28%;
-
 }
 
-  .hover-underline-animation {
+.hover-underline-animation {
     display: inline-block;
     position: relative;
+}
 
-  }
-  
-  .hover-underline-animation:after {
+.hover-underline-animation:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -187,63 +170,57 @@ p:hover {
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
     box-shadow: 2px 2px hsl(0, 87%, 48%);
-    ;
+}
 
-  }
-  
-  .hover-underline-animation:hover:after {
+.hover-underline-animation:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
+}
 
-  p.hover-underline-animation:after {
+p.hover-underline-animation:after {
     height: 1.5px;
-  }
-
-
+}
 
 @media (max-width: 1300px) {
-  .header-buttons {
+    .header-buttons {
         font-size: 26px;
+    }
+    ul {
+        gap: 30px;
+    } 
+}
 
-  }
-  ul {
-    gap: 14px;
-  } 
-}
 @media (max-width: 1100px) {
-  .header-buttons {
+    .header-buttons {
         font-size: 24px;
+    }
 }
-}
+
 @media (max-width: 995px) {
     .header {
         flex-direction: column;
         padding-top: 15px;
         padding-left: 10px;
         padding-right: 10px;
-
     }
     h2 {
-      font-size: 70px;
-      font-size: 18vw;
+        font-size: 70px;
+        font-size: 18vw;
     }
     .header-buttons {
         font-size: 18px;
         font-size: 4vw;
-
     }
     ul {
         gap: 14px;
     } 
 }
+
 @media (max-width: 530px) {
-  .header {
-    padding: 50px 15px;
-  }
-
+    .header {
+        padding: 50px 15px;
+    }
 }
-
 
 @media (max-width: 400px) {
     h1 {
@@ -258,8 +235,46 @@ p:hover {
         gap: 10px;
     }
     .header {
-      padding-left: 10px;
-      padding-right: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
+}
 
+/* Additional styling for the blind-solve page */
+#notation-generator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#cube-state {
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#generate-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#generate-button:hover {
+    background-color: #555;
+}
+
+#notations-output {
+    margin-top: 20px;
+    font-size: 16px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    width: 80%;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
 }
