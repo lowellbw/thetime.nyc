@@ -14,69 +14,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#A7A9AC">
-    <meta name="description" content="View the current time in various boroughs of NYC!">
-    <meta name="robots" content="index, nofollow">
+    <meta name="description" content= "View the time in NYC!" />
+    <meta name="robots" content= "index, nofollow">
+
     <title>thetime • nyc</title>
     <link rel="icon" href="l-train.png" type="image/icon type">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header content">
+    <div class="header content">
         <h1>thetime(nyc)</h1>
-        <nav>
-            <ul>
-                <li><button id="brooklyn" class="hover-underline-animation header-buttons" aria-label="Brooklyn">brooklyn</button></li>
-                <li><button id="manhattan" class="hover-underline-animation header-buttons" aria-label="Manhattan">manhattan</button></li>
-                <li><button id="queens" class="hover-underline-animation header-buttons" aria-label="Queens">queens</button></li>
-                <li><button id="bronx" class="hover-underline-animation header-buttons" aria-label="Bronx">bronx</button></li>
-                <li><button id="staten" class="hover-underline-animation header-buttons" aria-label="Staten Island">staten island</button></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main-body">
+        <ul>
+            <li><button id='brooklyn' class="hover-underline-animation header-buttons">brooklyn</button></li>
+            <li><button id='manhattan' class="hover-underline-animation header-buttons">manhattan</button></li>
+            <li><button id='queens' class="hover-underline-animation header-buttons">queens</button></li>
+            <li><button id='bronx' class="hover-underline-animation header-buttons">bronx</button></li>
+            <li><button id='staten' class="hover-underline-animation header-buttons">staten island</button></li>
+            <li><a href="blind-solve.html" class="hover-underline-animation header-buttons">Blind Solve Notations</a></li>
+        </ul>
+    </div>
+    <div class="main-body">
         <div class="video-container">
-            <video id="background-video" alt="Video of cityscapes" poster="background-m.jpeg" autoplay muted loop playsinline>
-                <source src="background-shortened.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <video alt='video of cityscapes' src="background-shortened.mp4" poster="background-m.jpeg" autoplay muted loop playsinline></video>
         </div>
-        <div id="the-time" class="content">
-            <h2 class="scroll-left"></h2>
+        <div id='the-time' class="content">
+            <h2 class='scroll-left'></h2>
         </div>
-    </main>
-    <footer class="footer content">
-        <a href="https://twitter.com/Lwbord" target="_blank" rel="noreferrer noopener">
-            <p class="hover-underline-animation">lowell weisbord 2022</p>
-        </a>
-    </footer>
-    <script src="moment.js" defer></script>
-    <script src="moment-timezone-with-data-10-year-range.js" defer></script>
-    <script src="javascript.js" defer></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var video = document.getElementById('background-video');
-            video.addEventListener('error', function() {
-                console.error('Error loading video');
-                video.poster = 'fallback-image.jpg'; // Set a fallback image
-            });
-
-            // Lazy load video
-            if ('IntersectionObserver' in window) {
-                let observer = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.play();
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.5 });
-
-                observer.observe(video);
-            } else {
-                // Fallback for browsers without IntersectionObserver
-                video.play();
-            }
-        });
-    </script>
+    </div>
+    <div class="footer content">
+        <a href="https://twitter.com/Lwbord" target="_blank" rel="noreferrer noopener"><p class="hover-underline-animation">lowell weisbord 2022</p></a>
+    </div>
+    <script src="moment.js"></script>
+    <script src="moment-timezone-with-data-10-year-range.js"></script>
+    <script src="javascript.js"></script>
 </body>
 </html>
+
