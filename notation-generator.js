@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const speffzCorners = {
-        ULB: 'A', UBR: 'B', URF: 'C', UFL: 'D',
+        ULB: 'A', URB: 'B', URF: 'C', UFL: 'D',
         DLF: 'E', DFR: 'F', DRB: 'G', DBL: 'H',
         ULF: 'I', URB: 'J', UFR: 'K', UBL: 'L',
         DFL: 'M', DRF: 'N', DLB: 'O', DBR: 'P'
@@ -22,22 +22,34 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        const cubeState = parseScramble(scramble);
-        const cornerCycles = generateCornerCycles(cubeState);
-        const edgeCycles = generateEdgeCycles(cubeState);
+        try {
+            console.log('Scramble:', scramble);
+            const cubeState = parseScramble(scramble);
+            console.log('Cube State:', cubeState);
 
-        const cornerNotation = cornerCycles.map(cycle => cycle.map(c => speffzCorners[c]).join('')).join(' ');
-        const edgeNotation = edgeCycles.map(cycle => cycle.map(e => speffzEdges[e]).join('')).join(' ');
+            const cornerCycles = generateCornerCycles(cubeState);
+            console.log('Corner Cycles:', cornerCycles);
 
-        notationsOutput.textContent = `Corners: ${cornerNotation}\nEdges: ${edgeNotation}`;
+            const edgeCycles = generateEdgeCycles(cubeState);
+            console.log('Edge Cycles:', edgeCycles);
+
+            const cornerNotation = cornerCycles.map(cycle => cycle.map(c => speffzCorners[c]).join('')).join(' ');
+            const edgeNotation = edgeCycles.map(cycle => cycle.map(e => speffzEdges[e]).join('')).join(' ');
+
+            notationsOutput.textContent = `Corners: ${cornerNotation}\nEdges: ${edgeNotation}`;
+        } catch (error) {
+            console.error('Error generating notations:', error);
+            notationsOutput.textContent = 'An error occurred while generating notations.';
+        }
     });
 
     function parseScramble(scramble) {
-        const cube = new cubing.alg.cube3.Cube();
+        console.log('Parsing scramble:', scramble);
+        const cube = new cubing.Cube();
         cube.move(scramble);
+        console.log('Cube after scramble:', cube);
         return cube;
     }
-
 
     function generateCornerCycles(cubeState) {
         const cycles = [];
@@ -105,4 +117,3 @@ document.addEventListener("DOMContentLoaded", function() {
         return edgeMapping[edge];
     }
 });
-
