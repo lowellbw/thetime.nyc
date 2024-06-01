@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const speffzCorners = {
-        ULB: 'A', URB: 'B', URF: 'C', UFL: 'D',
+        ULB: 'A', UBR: 'B', URF: 'C', UFL: 'D',
         DLF: 'E', DFR: 'F', DRB: 'G', DBL: 'H',
         ULF: 'I', URB: 'J', UFR: 'K', UBL: 'L',
         DFL: 'M', DRF: 'N', DLB: 'O', DBR: 'P'
@@ -22,25 +22,14 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        try {
-            console.log('Scramble:', scramble);
-            const cubeState = parseScramble(scramble);
-            console.log('Cube State:', cubeState);
+        const cubeState = parseScramble(scramble);
+        const cornerCycles = generateCornerCycles(cubeState);
+        const edgeCycles = generateEdgeCycles(cubeState);
 
-            const cornerCycles = generateCornerCycles(cubeState);
-            console.log('Corner Cycles:', cornerCycles);
+        const cornerNotation = cornerCycles.map(cycle => cycle.map(c => speffzCorners[c]).join('')).join(' ');
+        const edgeNotation = edgeCycles.map(cycle => cycle.map(e => speffzEdges[e]).join('')).join(' ');
 
-            const edgeCycles = generateEdgeCycles(cubeState);
-            console.log('Edge Cycles:', edgeCycles);
-
-            const cornerNotation = cornerCycles.map(cycle => cycle.map(c => speffzCorners[c]).join('')).join(' ');
-            const edgeNotation = edgeCycles.map(cycle => cycle.map(e => speffzEdges[e]).join('')).join(' ');
-
-            notationsOutput.textContent = `Corners: ${cornerNotation}\nEdges: ${edgeNotation}`;
-        } catch (error) {
-            console.error('Error generating notations:', error);
-            notationsOutput.textContent = 'An error occurred while generating notations.';
-        }
+        notationsOutput.textContent = `Corners: ${cornerNotation}\nEdges: ${edgeNotation}`;
     });
 
     function parseScramble(scramble) {
@@ -48,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
         cube.move(scramble);
         return cube;
     }
+
 
     function generateCornerCycles(cubeState) {
         const cycles = [];
