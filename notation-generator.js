@@ -22,14 +22,25 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        const cubeState = parseScramble(scramble);
-        const cornerCycles = generateCornerCycles(cubeState);
-        const edgeCycles = generateEdgeCycles(cubeState);
+        try {
+            console.log('Scramble:', scramble);
+            const cubeState = parseScramble(scramble);
+            console.log('Cube State:', cubeState);
 
-        const cornerNotation = cornerCycles.map(cycle => cycle.map(c => speffzCorners[c]).join('')).join(' ');
-        const edgeNotation = edgeCycles.map(cycle => cycle.map(e => speffzEdges[e]).join('')).join(' ');
+            const cornerCycles = generateCornerCycles(cubeState);
+            console.log('Corner Cycles:', cornerCycles);
 
-        notationsOutput.textContent = `Corners: ${cornerNotation}\nEdges: ${edgeNotation}`;
+            const edgeCycles = generateEdgeCycles(cubeState);
+            console.log('Edge Cycles:', edgeCycles);
+
+            const cornerNotation = cornerCycles.map(cycle => cycle.map(c => speffzCorners[c]).join('')).join(' ');
+            const edgeNotation = edgeCycles.map(cycle => cycle.map(e => speffzEdges[e]).join('')).join(' ');
+
+            notationsOutput.textContent = `Corners: ${cornerNotation}\nEdges: ${edgeNotation}`;
+        } catch (error) {
+            console.error('Error generating notations:', error);
+            notationsOutput.textContent = 'An error occurred while generating notations.';
+        }
     });
 
     function parseScramble(scramble) {
@@ -83,7 +94,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function getNextCorner(cubeState, corner) {
-        // Mapping of corner stickers to their next positions
         const cornerMapping = {
             ULB: 'ULB', URB: 'URF', URF: 'UFL', UFL: 'ULB',
             DLF: 'DFR', DFR: 'DRB', DRB: 'DBL', DBL: 'DLF',
@@ -95,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function getNextEdge(cubeState, edge) {
-        // Mapping of edge stickers to their next positions
         const edgeMapping = {
             UL: 'UR', UR: 'UF', UF: 'UB', UB: 'UL',
             FL: 'FR', FR: 'BL', BL: 'BR', BR: 'FL',
@@ -106,3 +115,4 @@ document.addEventListener("DOMContentLoaded", function() {
         return edgeMapping[edge];
     }
 });
+
