@@ -10,15 +10,19 @@
     <title>Blind Solve Memory Notations</title>
     <link rel="icon" href="l-train.png" type="image/icon type">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/cubing@0.22.1/dist/cubing.min.js"></script>
 </head>
 <body>
     <header class="header content">
-        <h3>Blind Solve Memory Notations</h3>
+        <h1>Blind Solve Memory Notations</h1>
+        <ul>
+            <li><a href="index.html" class="hover-underline-animation header-buttons">Home</a></li>
+        </ul>
     </header>
     <main class="main-body content">
         <div id="notation-generator">
             <h3>Generate Memory Notations</h3>
-            <textarea id="cube-state" rows="10" cols="50" placeholder="Enter your cube state here..."></textarea>
+            <textarea id="scramble-input" rows="10" cols="50" placeholder="Enter your scramble here..."></textarea>
             <br>
             <button id="generate-button">Generate Notations</button>
             <h3>Memory Notations:</h3>
@@ -26,7 +30,7 @@
         </div>
     </main>
     <footer class="footer content">
-        <a href="index.html"><p class="hover-underline-animation">Back to Home</p></a>
+        <a href="index.html" class="hover-underline-animation">Back to Home</a>
     </footer>
     <script src="notation-generator.js"></script>
 </body>
